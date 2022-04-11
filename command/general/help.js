@@ -33,20 +33,20 @@ module.exports = {
                     category[info.category].push(info);
                 }
             }
-            let str = '\t'.repeat(13) + "\`\`\`AYRAKU BOT\`\`\`\n\n"
-                + `Hello, ${pushName === undefined ? sender.split("@")[0] : pushName}\n*Here My Command List*\n\n`;
+            let str = '\t'.repeat(13) + "\`\`\`AYRAKU BOT'\`\`\`\n\n\nJangan Di Spam Ya\n\n\n"
+                + `Hello, ${pushName === undefined ? sender.split("@")[0] : pushName}\n*BERIKUT LIST PERINTAH/COMMAND YANG TERSEDIA*\n\n`;
             const keys = Object.keys(category);
             for (const key of keys) {
                 str += `*${key.toUpperCase()}*\n~> \`\`\`${category[key]
                     .map((cmd) => cmd.name).join(', ')}\`\`\`\n\n`
             }
-            str += `send ${prefix}help followed by a command name to get detail of command, e.g. ${prefix}help sticker`;
+            str += `Untuk bantuan Ketikkan ${prefix}help diikuti perintah/command , e.g. ${prefix}help wiki`;
             await sock.sendMessage(msg.from, {
                 text: str,
-                footer: "AYRAKU BOT  • Opux Tad",
+                footer: "Ayraku My PrivateBot • TammyArtha",
                 templateButtons: [
-                    { urlButton: { displayText: "Contact Me", url: "https://wa.me/6281268414805" } },
-                    { urlButton: { displayText: "Instagram", url: "https://www.instagram.com/tammyartha/" } }
+                    { urlButton: { displayText: "Instagram", url: "https://www.instagram.com/tammyartha/" } },
+                    { urlButton: { displayText: "WhatsApp", url: "https://wa.me/62811666884" } }
                 ]
             }, { quoted: msg })
         }
