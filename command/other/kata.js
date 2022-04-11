@@ -21,7 +21,7 @@ module.exports = {
                 }]
                 await sock.sendMessage(msg.from, {
                     text: "Silahkan Pilih Melalui Tombol Dibawah.",
-                    footer: "Kaguya PublicBot • FaizBastomi",
+                    footer: "Ayraku Bot • Opux Tad",
                     title: "Random Kata",
                     buttonText: "List",
                     sections: secs
