@@ -1,5 +1,5 @@
 <div align="center">
-<img src="hhttps://telegra.ph/file/2ab10e489245c2966e882.jpg" width="150" height="150" border="0" alt="PFP">
+<img src="hhttps://telegra.ph/file/2ab10e489245c2966e882.jpg">
     
     Base On Faiz Bastomi - Wbot
 
