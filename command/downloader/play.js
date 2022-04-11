@@ -21,7 +21,7 @@ module.exports = {
             buttonsMessage: {
                 locationMessage: { jpegThumbnail: thumb.toString("base64") },
                 contentText: `📙 Title: ${ytsData[0].title}\n📎 Url: ${ytsData[0].url}\n🚀 Upload: ${ytsData[0].ago}\n\nWant a video version? click button below, or you don\'t see it? type *!ytv youtube_url*\n\nAudio on progress....`,
-                footerText: "Tammy Private Bot • Tammy Artha",
+                footerText: "Kaguya PublicBot • FaizBastomi",
                 headerType: 6,
                 buttons: [{ buttonText: { displayText: "Video" }, buttonId: `#ytv ${ytsData[0].url} SMH`, type: 1 }]
             }

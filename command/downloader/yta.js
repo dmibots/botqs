@@ -11,13 +11,13 @@ module.exports = {
     desc: 'Download YouTube Audio',
     async exec(msg, sock, args) {
         try {
-            if (args.length < 1) return await msg.reply(`Tambahkan URL Youtube Untuk mengunduh File Audionya - Tammy Bot`);
+            if (args.length < 1) return await msg.reply(`URL not provided`);
             let { url, opt } = textParse(args.join(" "))
             if (!validateURL(url)) return await msg.reply(lang.eng.util.download.notYTURL);
             await msg.reply(`IND:\n${lang.indo.util.download.progress}\n\nEN:\n${lang.eng.util.download.progress}`);
 
             const res = await yt(url, "audio");
-            if (res === "no_file") return await msg.reply("Link tidak terdeteksi, coba lagi?");
+            if (res === "no_file") return await msg.reply("No download link found, maybe try another link?");
             switch (opt) {
                 case "--doc":
                     if (res.size >= 15 << 10) {
@@ -52,7 +52,7 @@ module.exports = {
 
         } catch (e) {
             console.log(e)
-            await msg.reply('Eror terdeteksi, coba lagi.');
+            await msg.reply('Something went wrong, check back later.');
         }
     }
 }

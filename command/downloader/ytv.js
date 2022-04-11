@@ -11,7 +11,7 @@ module.exports = {
     desc: 'Download YouTube Video',
     async exec(msg, sock, args) {
         try {
-            if (args.length < 1) return await msg.reply(`Masukkan URL Youtube yang valid`);
+            if (args.length < 1) return await msg.reply(`URL not provided`);
             let { url, opt } = textParse(args.join(" "))
             if (!validateURL(url)) return await msg.reply(lang.eng.util.download.notYTURL);
             await msg.reply(`IND:\n${lang.indo.util.download.progress}\n\nEN:\n${lang.eng.util.download.progress}`);
