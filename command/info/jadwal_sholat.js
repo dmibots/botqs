@@ -8,7 +8,7 @@ module.exports = {
     use: "<nama kota>",
     category: "information",
     async exec(msg, sock, args) {
-        if (!args.length > 0) return await msg.reply(`Masukan nama kota.\n\nNote: ${info}`);
+        if (!args.length > 0) return await msg.reply(`Masukan nama kota.\n\nCatatan: ${info}`);
 
         try {
             let cityData, citySchedule, sections = [];
@@ -30,7 +30,7 @@ module.exports = {
                 await sock.sendMessage(msg.from, {
                     text: "Hasil pencarian kota",
                     buttonText: "hasil",
-                    footer: "Tammy PrivateBot • TammyArtha",
+                    footer: "AYRAKU Bot • Opux Tad",
                     sections
                 }, { quoted: msg });
             } else {

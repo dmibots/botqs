@@ -28,7 +28,7 @@ module.exports = {
                     break;
             }
         } catch {
-            await msg.reply("Data Wikipedia yang anda cari tidak ditemukan, Silahkan Ganti Query yang Lain");
+            await msg.reply("Error Bro, Harap Ganti Kata Pecarian");
         }
     }
 }
