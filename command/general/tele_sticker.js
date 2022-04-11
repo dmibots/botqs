@@ -4,7 +4,7 @@ module.exports = {
     name: "telestick",
     category: "general",
     desc: "Search telegram sticker for you.",
-    use: "<query>|[page number].\nExample: #telestick Ame|2",
+    use: "<query>|[page number].\nExample: #telestick Muadzin|2",
     async exec(msg, sock, args, arg) {
         try {
             let dataSticker, text = "", page = parseInt(arg.split("|")[1]) || 1,
@@ -27,32 +27,32 @@ module.exports = {
                 await msg.reply(text);
             } else if (page < dataSticker.pageInfo.total && page === 1) {
                 const buttons = [
-                    { buttonId: `#telestick ${query}|${page + 1} SMH`, buttonText: { displayText: '➡️ Next' }, type: 1 }
+                    { buttonId: `#telestick ${query}|${page + 1} AYRAKU`, buttonText: { displayText: '➡️ Next' }, type: 1 }
                 ]
                 await sock.sendMessage(msg.from, {
                     text,
-                    footer: "Tammy PrivateBot • TammyArtha",
+                    footer: "AYRAKU BOT  • Opux Tad ",
                     buttons,
                     headerType: 1
                 }, { quoted: msg });
             } else if (page < dataSticker.pageInfo.total) {
                 const buttons = [
-                    { buttonId: `#telestick ${query}|${page - 1} Tam'sBot'`, buttonText: { displayText: '⬅️ Previous' }, type: 1 },
-                    { buttonId: `#telestick ${query}|${page + 1} Tam'sBot`, buttonText: { displayText: '➡️ Next' }, type: 1 }
+                    { buttonId: `#telestick ${query}|${page - 1} AYRAKU`, buttonText: { displayText: '⬅️ Previous' }, type: 1 },
+                    { buttonId: `#telestick ${query}|${page + 1} AYRAKU`, buttonText: { displayText: '➡️ Next' }, type: 1 }
                 ]
                 await sock.sendMessage(msg.from, {
                     text,
-                    footer: "Tammy PrivateBot • TammyArtha",
+                    footer: "AYRAKU BOT  • Opux Tad",
                     buttons,
                     headerType: 1
                 }, { quoted: msg });
             } else if (page === dataSticker.pageInfo.total) {
                 const buttons = [
-                    { buttonId: `#telestick ${query}|${page - 1} Tam'sBot'`, buttonText: { displayText: '⬅️ Previous' }, type: 1 }
+                    { buttonId: `#telestick ${query}|${page - 1} AYRAKU`, buttonText: { displayText: '⬅️ Previous' }, type: 1 }
                 ]
                 await sock.sendMessage(msg.from, {
                     text,
-                    footer: "Tammy PrivateBot • TammyArtha",
+                    footer: "AYRAKU BOT  • Opux Tad",
                     buttons,
                     headerType: 1
                 }, { quoted: msg });
