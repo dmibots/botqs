@@ -1,7 +1,7 @@
 {
   "name": "ayra-bot",
-  "description":"A WhatsApp Bot built with Baileys",
-  "version": "1.0.1",
+  "description":"A WhatsApp Bot built with Baileys base on Wbot",
+  "version": "1.0.1-1",
   "main": "./lib/connect.js",
   "license": "MIT",
   "author": "Opux",
